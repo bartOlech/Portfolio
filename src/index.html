@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/bcg.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="container demo-2">
+            <div class="content">
+                <div class='header-text'>
+                    <h1>Bartłomiej Olech</h1>
+                    <h2>front-end developer</h2>
+                    <div class="social-icons">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-google-plus"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                        <a href=""><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class='arrow-position'>
+                    <div class="arrow bounce">
+                        <a class="fa fa-arrow-down fa-2x" href="#"></a>
+                    </div>
+                </div>
+                <div id="large-header" class="large-header">
+                    <canvas id="demo-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="about-me">
+            <div class="face-image"></div>
+            <div class="text-about-me">
+                <h2 class='tittle-section'>O mnie</h2>
+                <p class='about-me-description'>Jestem studentem 2 roku Akademii Górniczo-Hutniczej w Krakowie. Od
+                    dwóch lat
+                    rozwijam swoje umiejętności jako Front-End Developer.
+                </p>
+                <p class='about-me-description'>
+                    Potrafię z łatwością zakodować szablon
+                    PSD do HTML, lecz najchętniej tworzę aplikacje internetowe z wykorzystaniem <b>JavaScript</b> oraz
+                    <b>React.js</b>
+                </p>
+                <p class='about-me-description'>
+                    Dodatkowo korzystam narzędzi takich jak: <b>Webpack</b>, <b>Gulp</b> oraz <b>Sass</b>.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="skills">
+            <header class="main-skills">
+                <h2 class="tittle-section">Umiejętności</h2>
+            </header>
+            <!--Front-end-->
+            <div class='horizontal-line front-color'></div>
+            <div class="skewed-bg">
+                <div class='box-skills'>
+                    <div class='skills-main-icon-front skills-main-icon'><i class="fas fa-code"></i></div>
+                    <span class='skills-tittle-text'>Front-end</span>
+                </div>
+                <div class='skills-tools'>
+                    <ul>
+                        <li><i class="fab fa-html5 ico"></i>HTML5</li>
+                        <li><i class="fab fa-css3 ico"></i>CSS</li>
+                        <li><i class="fab fa-sass ico"></i>SCSS</li>
+                        <li><i class="fab fa-js-square ico"></i>JavaScript</li>
+                        <li><i class="fab fa-gulp ico"></i>Gulp</li>
+                        <li><i class="fas fa-tasks ico"></i> Webpack</li>
+                    </ul>
+                </div>
+            </div>
+            <div class='horizontal-line back-color'></div>
+            <!--Back-end-->
+            <div class="skewed-bg">
+                <div class='box-skills box-skills-b'>
+                    <div class='skills-main-icon-back skills-main-icon'><i class="fas fa-cogs"></i></div>
+                    <span class='skills-tittle-text'>Back-end</span>
+                </div>
+                <div class='skills-tools skills-tools-back-end'>
+                    <ul>
+                        <li><i class="fas fa-database ico"></i>SQL</li>
+                        <li style='position:relative; margin-left: -2px'><img class='ico-photo' src='./img/icons/mongo5.png' /><span
+                                class='ico-photo-text'>MongoDB</span></li>
+                        <li style='position:relative'><img class='ico-photo' src='./img/icons/node.png' /><span class='ico-photo-text'>Node+Express</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class='horizontal-line libs-color'></div>
+            <!--Frameworks / Libs-->
+            <div class="skewed-bg">
+                <div class='box-skills box-skills-f'>
+                    <div class='skills-main-icon-fram skills-main-icon'><i class="fas fa-box"></i></div>
+                    <span class='skills-tittle-text'>Frameworks / Libs</span>
+                </div>
+                <div class='skills-tools'>
+                    <ul>
+                        <li><i class="fab fa-react ico"></i>React.js</li>
+                        <li><i class="fas fa-bold ico"></i>Bootstrap</li>
+                        <li style='position:relative'><img class='ico-photo' src='./img/icons/icons8-jquery-filled-50.png' /><span
+                                class='ico-photo-text'>jQuery</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class='horizontal-line other-color'></div>
+            <!--Inne-->
+            <div class="skewed-bg-last">
+                <div class='box-skills box-skills-i'>
+                    <div class='skills-main-icon-other skills-main-icon'><i class="fas fa-plus"></i></div>
+                    <span class='skills-tittle-text'>Inne</span>
+                </div>
+                <div class='skills-tools skills-tools-other'>
+                    <ul>
+                        <li style='position:relative'><img class='ico-photo' src='./img/icons/icons8-git-50.png' /><span
+                                class='ico-photo-text'>Git</span></li>
+                        <li><i class="fab fa-github ico"></i>GitHub</li>
+                        <li><i class="fab fa-linux ico"></i>Linux</li>
+                        <li><i class="fas fa-server ico"></i>API</li>
+                        <li><i class="fas fa-mobile-alt ico"></i>RWD</li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+    <!--Projekty-->
+    <section>
+        <div class="section-projects">
+            <h2 class="tittle-section">Projekty</h2>
+            <div class="projects">
+                <div class="project project-1">
+                    <div class="project-description">
+                        <h2>NoiseApp</h2>
+                        <p>Aplikacja, w której możesz odprężyć się odgłosami natury i nie tylko </p>
+                        <ul>
+                            <li><img src="./img/icons/react.png" alt="react ico"></li>
+                            <li><img src="./img/icons/css.png" alt="css ico"></li>
+                            <li><img src="./img/icons/node.png" alt="node ico"></li>
+                            <li><img src="./img/icons/mongo5.png" alt="mongo ico"></li>
+                        </ul>
+                    </div>
+                    <div class='reference'>
+                        <a href="#"><i class="fas fa-search"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project project-2">
+                    <div class="project-description">
+                        <h2>BitBot</h2>
+                        <p>Aplikacja sterująca kontem giełdy kryptowalut Bitmex</p>
+                        <ul>
+                            <li><img class='ico-photo' src='./img/icons/node.png' /></li>
+                            <li><img src="./img/icons/css.png" alt="css ico"></li>
+                        </ul>
+                    </div>
+                    <div class='reference'>
+                        <a href="#"><i class="fas fa-search"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                 <div class="project project-3">
+                    <div class="project-description">
+                        <h2>Quiz-10</h2>
+                        <p>Quiz sprawdzający twoją wiedzę z 2 dziedzin</p>
+                        <ul>
+                            <li><img src="./img/icons/html.png" alt=""></li>
+                            <li><img src="./img/icons/js.png" alt="js ico"></li>
+                            <li><img src="./img/icons/sass.png" alt="sass ico"></li>
+                            <li><img src="./img/icons/node.png" alt="node ico"></li>
+                            <li><img src="./img/icons/mongo5.png" alt="mongo ico"></li>
+                        </ul>
+                    </div>
+                    <div class='reference'>
+                        <a href="#"><i class="fas fa-search"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project project-4">
+                    <div class="project-description">
+                        <h2>Pomocnik kuchenny</h2>
+                        <p>Aplikacja, w wybierze przepis według wybranych składników </p>
+                        <ul>
+                            <li><img src="./img/icons/react.png" alt="react ico"></li>
+                            <li><img src="./img/icons/css.png" alt="css ico"></li>
+                        </ul>
+                    </div>
+                    <div class='reference'>
+                        <a href="#"><i class="fas fa-search"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project project-5">
+                    <div class="project-description">
+                        <h2>BMI calc</h2>
+                        <p>Aplikacja wyznaczająca towje BMI </p>
+                        <ul>
+                            <li><img src="./img/icons/html.png" alt=""></li>
+                            <li><img src="./img/icons/js.png" alt="js ico"></li>
+                            <li><img src="./img/icons/sass.png" alt="sass ico"></li>
+                        </ul>
+                    </div>
+                    <div class='reference'>
+                        <a href="#"><i class="fas fa-search"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div id='project-6' class="project project-6 additional-project">
+                    <div class="project-description">
+                        <h2>Crypto calc</h2>
+                        <p>Przelicznik kryptowalut</p>
+                        <ul>
+                            <li><img src="./img/icons/html.png" alt="html ico"></li>
+                            <li><img src="./img/icons/js.png" alt="js ico"></li>
+                            <li><img src="./img/icons/sass.png" alt="sass ico"></li>
+                        </ul>
+                    </div>
+                    <div class='reference'>
+                        <a href="#"><i class="fas fa-search"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div id='project-7' class="project project-7 additional-project">
+                    <div class="project-description">
+                        <h2>Strona pizzerii</h2>
+                        <p>Projekt prostej strony internetowej pizzerii</p>
+                        <ul>
+                            <li><img src="./img/icons/html.png" alt=""></li>
+                            <li><img src="./img/icons/js.png" alt="js ico"></li>
+                            <li><img src="./img/icons/css.png" alt="css ico"></li>
+                        </ul>
+                    </div>
+                    <div class='reference'>
+                        <a href="#"><i class="fas fa-search"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class='more-projects-section'><button id='button-load-more' class='button-load-more'><span class='text-button'>Więcej </span><div class='button-more-projects-line'></div><div id='arrow-more-projects' class="arrow-more-projects arrow-down"></div></button></div>
+        </div>
+    </section>
+    <script src="js/bcg.js"></script>
+</body>
+
+</html>

@@ -112,36 +112,47 @@ document.querySelector('#button-load-more').addEventListener('click', function (
     }
 
 });
+
+document.querySelector('#form-btn').addEventListener('click', function () {
     const inputName = document.querySelector('#input-name');
     const inputEmail = document.querySelector('#input-email');
     const inputMsg = document.querySelector('#input-msg');
-document.querySelector('#form-btn').addEventListener('click', function () {
     const emailTest = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const emailValidation = emailTest.test(String(inputEmail.value).toLowerCase());
+    let correctValues = false;
 
-    if(inputName.value === '' || inputEmail.value === '' || inputMsg.value === ''){
-        if(inputName.value === ''){
-           inputName.style.borderBottom = '2px solid #d9534f'
-        }else{
-            inputName.style.borderBottom = '2px solid #D9D9D9'
-        }
-
-         if(inputEmail.value === ''){
-            inputEmail.style.borderBottom = '2px solid #d9534f'
-        }else{
-            inputEmail.style.borderBottom = '2px solid #D9D9D9'
-        }
-
-         if(inputMsg.value === ''){
-            inputMsg.style.borderBottom = '2px solid #d9534f'
-        }else{
-            inputMsg.style.borderBottom = '2px solid #D9D9D9'
-        }
+    if (inputName.value === '') {
+        inputName.style.borderBottom = '2px solid #d9534f'
+    } else {
+        inputName.style.borderBottom = '2px solid #D9D9D9'
     }
-    
-    if(!emailValidation){
+
+    if (inputEmail.value === '') {
         inputEmail.style.borderBottom = '2px solid #d9534f'
-    }else{
-            inputEmail.style.borderBottom = '2px solid #D9D9D9'
-        }
+    } else {
+        inputEmail.style.borderBottom = '2px solid #D9D9D9'
+    }
+
+    if (inputMsg.value === '') {
+        inputMsg.style.borderBottom = '2px solid #d9534f'
+    } else {
+        inputMsg.style.borderBottom = '2px solid #D9D9D9'
+    }
+
+
+    if (!emailValidation) {
+        inputEmail.style.borderBottom = '2px solid #d9534f'
+    } else {
+        inputEmail.style.borderBottom = '2px solid #D9D9D9'
+    }
+
+    if (inputName.value !== '' && inputEmail.value !== '' && inputMsg.value !== '' && emailValidation) {
+        correctValues = true;
+    } else {
+        correctValues = false;
+    }
+
+    if (correctValues) {
+        console.log('everything work very well, send message :)')
+    }
 })

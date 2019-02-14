@@ -371,9 +371,10 @@ b{
     display:none;
 }
 .text-button{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 800;
     font-size: 1.6px;
+    color: #25242A;
 }
 
 @keyframes fadeIn {
@@ -615,6 +616,18 @@ b{
     }
     .cv{
         margin-left: 28px;
+    }
+    .skills-tools .rwd-list{
+        display: flex;
+    }
+    .rwd-list-first-child{
+        margin-right: 50px;
+    }
+    .rwd-list-other{
+        margin-right: -195px;
+    }
+    .rwd-list-front{
+        margin-right: -166px;
     }
 }
 @media only screen and (min-width:1150px){

@@ -42,4 +42,5 @@ exports.mail = (req, res) => {
         console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
     });
+    res.status(200).json({status: 'sended'})
 }

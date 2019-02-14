@@ -532,6 +532,9 @@ b{
     font-weight: 500;
     font-family: 'Rubik', sans-serif;  
 }
+.msg-field{
+    margin-bottom: 17px;
+}
 ::placeholder{
     color: rgb(158, 158, 158);
 }
@@ -555,4 +558,5 @@ b{
 .form-btn:hover{
     background-color: rgb(25, 24, 29);
 }
+
 

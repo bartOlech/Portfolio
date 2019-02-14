@@ -1,4 +1,5 @@
 let isHidden = true;
+const sendBtn = document.querySelector('#form-btn');
 
 (function () {
 
@@ -113,7 +114,9 @@ document.querySelector('#button-load-more').addEventListener('click', function (
 
 });
 
-document.querySelector('#form-btn').addEventListener('click', function () {
+document.querySelector('#form-btn').addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log('click')
     const inputName = document.querySelector('#input-name');
     const inputEmail = document.querySelector('#input-email');
     const inputMsg = document.querySelector('#input-msg');
@@ -153,6 +156,44 @@ document.querySelector('#form-btn').addEventListener('click', function () {
     }
 
     if (correctValues) {
-        console.log('everything work very well, send message :)')
+        console.log('wysyłanie...')
+        if(sendBtn.value === ''){
+            sendBtn.innerHTML = 'Wysłano'
+        }else{
+        sendBtn.innerHTML = '';
+        }
+        fetch('http://localhost:8080/api/mail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: inputName.value,
+                email: inputEmail.value,
+                msg: inputMsg.value
+            })
+        }).then(json => {
+            console.log(json)
+            sendBtn.innerHTML = 'Wysłano';
+            sendBtn.disabled = true;
+        }).catch(err => console.log(err))
+    }
+})
+document.querySelector('#input-name').addEventListener('keyup', function(){
+    if(sendBtn.disabled){
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = 'Wyślij';
+    }
+})
+document.querySelector('#input-email').addEventListener('keyup', function(){
+    if(sendBtn.disabled){
+        sendBtn.disabled = false;
+         sendBtn.innerHTML = 'Wyślij';
+    }
+})
+document.querySelector('#input-msg').addEventListener('keyup', function(){
+    if(sendBtn.disabled){
+        sendBtn.disabled = false;
+         sendBtn.innerHTML = 'Wyślij';
     }
 })

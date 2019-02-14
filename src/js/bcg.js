@@ -107,7 +107,7 @@ document.querySelector('#button-load-more').addEventListener('click', function (
         document.querySelector('#arrow-more-projects').classList.remove('arrow-down')
         document.querySelector('#arrow-more-projects').classList.add('arrow-up')
     } else {
-        document.querySelector('.text-button').innerText = 'Więcej'
+        document.querySelector('.text-button').innerText = 'Więcej projektów'
         document.querySelector('#arrow-more-projects').classList.remove('arrow-up')
         document.querySelector('#arrow-more-projects').classList.add('arrow-down')
     }
@@ -158,7 +158,7 @@ document.querySelector('#form-btn').addEventListener('click', function (e) {
     if (correctValues) {
         console.log('wysyłanie...')
         if(sendBtn.value === ''){
-            sendBtn.innerHTML = 'Wysłano'
+            sendBtn.innerHTML = 'Wysłano!'
         }else{
         sendBtn.innerHTML = '';
         }
@@ -174,7 +174,7 @@ document.querySelector('#form-btn').addEventListener('click', function (e) {
             })
         }).then(json => {
             console.log(json)
-            sendBtn.innerHTML = 'Wysłano';
+            sendBtn.innerHTML = 'Wysłano!';
             sendBtn.disabled = true;
         }).catch(err => console.log(err))
     }

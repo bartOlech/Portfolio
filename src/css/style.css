@@ -287,27 +287,58 @@ b{
     border-radius:5px;
     position: relative;
     margin-right:-5px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .project-1{
-    background-image: url('../img/eee.jpg');
+    background-image: url('../img/app-screen/noise-app-screen.png'); 
 }
+.project-1:hover{
+    cursor: pointer;
+    background-image: url('../img/app-screen/noise-app-screen2.png')
+}
+
 .project-2{
-    background-image: url('../img/eee.jpg');
+    background-image: url('../img/app-screen/bit_bot_screen-r.jpg'); 
+}
+.project-2:hover{
+    cursor: pointer;
+    background-image: url('../img/app-screen/bit_bot_screen2-r.png')
 }
 .project-3{
-    background-image: url('../img/eee.jpg');
+    background-image: url('../img/app-screen/quiz-screen.png'); 
+}
+.project-3:hover{
+    cursor: pointer;
+    background-image: url('../img/app-screen/quiz-screen2.png')
 }
 .project-4{
-    background-image: url('../img/eee.jpg');
+    background-image: url('../img/app-screen/recipe-screen.png'); 
+}
+.project-4:hover{
+    cursor: pointer;
+    background-image: url('../img/app-screen/recipe-screen2.png')
 }
 .project-5{
-    background-image: url('../img/eee.jpg');
+    background-image: url('../img/app-screen/bmi-screen.png'); 
+}
+.project-5:hover{
+    cursor: pointer;
+    background-image: url('../img/app-screen/bmi-screen2.png')
 }
 .project-6{
-    background-image: url('../img/eee.jpg');
+    background-image: url('../img/app-screen/crypto-screen.png'); 
+}
+.project-6:hover{
+    cursor: pointer;
+    background-image: url('../img/app-screen/crypto-screen2.png')
 }
 .project-7{
-    background-image: url('../img/eee.jpg');
+    background-image: url('../img/app-screen/pizza-screen.png'); 
+}
+.project-7:hover{
+    cursor: pointer;
+    background-image: url('../img/app-screen/pizza-screen2.png')
 }
 
 .more-projects-section{
@@ -384,6 +415,8 @@ b{
 
 .reference{
     text-align: center;
+    display: none;
+    justify-content: center;
 }
 .reference a{
     display:inline-block;
@@ -408,6 +441,7 @@ b{
     background-color: rgb(16, 19, 24);
 }
 .project-description{
+    display: none;
     position: absolute;
     width:80%;
     margin-left:auto;
@@ -649,7 +683,7 @@ b{
         justify-content: center;
     }
     .project{
-        border-radius: 2px;
+        border-radius: 8px;
         margin:5px;
     }
 }

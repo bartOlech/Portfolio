@@ -103,11 +103,11 @@ document.querySelector('#button-load-more').addEventListener('click', function (
         document.querySelector('#project-7').classList.remove('showMore')
     }
     if (!isHidden) {
-        document.querySelector('.text-button').innerText = 'Mniej';
+        document.querySelector('#text-button').innerText = 'Mniej';
         document.querySelector('#arrow-more-projects').classList.remove('arrow-down')
         document.querySelector('#arrow-more-projects').classList.add('arrow-up')
     } else {
-        document.querySelector('.text-button').innerText = 'Więcej projektów'
+        document.querySelector('#text-button').innerText = 'Więcej projektów'
         document.querySelector('#arrow-more-projects').classList.remove('arrow-up')
         document.querySelector('#arrow-more-projects').classList.add('arrow-down')
     }

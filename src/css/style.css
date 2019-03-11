@@ -281,64 +281,141 @@ b{
     text-align:center;
 }
 .project{
-    width:95%;
+    width:400px;
     height:300px;
     margin-bottom:10px;
     border-radius:5px;
     position: relative;
     margin-right:-5px;
+    display: flex;
+    flex-direction: column;
+}
+.project:after{
+    border-radius:5px;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/* images of projects  */
 .project-1{
-    background-image: url('../img/app-screen/noise-app-screen.png'); 
+
 }
-.project-1:hover{
+.project-1:after{
+    content: '';
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background-image: url('../img/app-screen/noise-app-screen.jpg'); 
+}
+.project-1:hover:after{
+    content: '';
     cursor: pointer;
-    background-image: url('../img/app-screen/noise-app-screen2.png')
+    opacity: .3;
 }
 
 .project-2{
-    background-image: url('../img/app-screen/bit_bot_screen-r.jpg'); 
+
 }
-.project-2:hover{
+.project-2:after{
+    content: '';
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background-image: url('../img/app-screen/bit_bot_screen.jpg'); 
+}
+.project-2:hover:after{
+    content: '';
     cursor: pointer;
-    background-image: url('../img/app-screen/bit_bot_screen2-r.png')
+    opacity: .3;
 }
+
 .project-3{
-    background-image: url('../img/app-screen/quiz-screen.png'); 
+
 }
-.project-3:hover{
+.project-3:after{
+    content: '';
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background-image: url('../img/app-screen/quiz-screen.jpg'); 
+}
+.project-3:hover:after{
+    content: '';
     cursor: pointer;
-    background-image: url('../img/app-screen/quiz-screen2.png')
+    opacity: .3;
 }
+
 .project-4{
-    background-image: url('../img/app-screen/recipe-screen.png'); 
+
 }
-.project-4:hover{
+.project-4:after{
+    content: '';
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background-image: url('../img/app-screen/recipe-screen.jpg'); 
+}
+.project-4:hover:after{
+    content: '';
     cursor: pointer;
-    background-image: url('../img/app-screen/recipe-screen2.png')
+    opacity: .3;
 }
+
 .project-5{
-    background-image: url('../img/app-screen/bmi-screen.png'); 
+
 }
-.project-5:hover{
+.project-5:after{
+    content: '';
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background-image: url('../img/app-screen/bmi-screen.jpg'); 
+}
+.project-5:hover:after{
+    content: '';
     cursor: pointer;
-    background-image: url('../img/app-screen/bmi-screen2.png')
+    opacity: .3;
 }
+
 .project-6{
-    background-image: url('../img/app-screen/crypto-screen.png'); 
+
 }
-.project-6:hover{
+.project-6:after{
+    content: '';
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background-image: url('../img/app-screen/crypto-screen.jpg'); 
+}
+.project-6:hover:after{
+    content: '';
     cursor: pointer;
-    background-image: url('../img/app-screen/crypto-screen2.png')
+    opacity: .3;
+    top: 0;
 }
+
 .project-7{
-    background-image: url('../img/app-screen/pizza-screen.png'); 
+
 }
-.project-7:hover{
+.project-7:after{
+    content: '';
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background-image: url('../img/app-screen/pizza-screen.jpg'); 
+}
+.project-7:hover:after{
+    content: '';
     cursor: pointer;
-    background-image: url('../img/app-screen/pizza-screen2.png')
+    opacity: .3;
+    top: 0;
 }
 
 .more-projects-section{
@@ -641,7 +718,7 @@ b{
     flex-direction: column;
     align-items: center;
 }
-@media only screen and (min-width:850px){
+@media only screen and (min-width: 1100px){
     .contact-form{
         width: 35%;
         border-radius: 3px;

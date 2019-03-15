@@ -297,6 +297,22 @@ b{
 }
 
 /* images of projects  */
+.mobile-image{
+    width: 100vw;
+    height: 370px;
+    border-radius:5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: .4;
+}
+.project-photos-desktop{
+    display: none;
+}
+.project-photos-mobile{
+    display: flex;
+}
+
 .project-1{
 
 }
@@ -306,7 +322,7 @@ b{
     height: 100%;
     z-index: -1;
     position: absolute;
-    background-image: url('../img/app-screen/noise-app-screen.jpg'); 
+    background-image: url('../img/app-screen/noise-app-screen.jpg');
 }
 .project-1:hover:after{
     content: '';
@@ -417,6 +433,35 @@ b{
     opacity: .3;
     top: 0;
 }
+
+/* slider effect */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+
 
 .more-projects-section{
     display:flex;
@@ -554,6 +599,7 @@ b{
     height:38px;
 }
 .contact-section{
+    margin-top: 10px;
     width: 100%;
     background-color: #25242A;
 }
@@ -718,7 +764,13 @@ b{
     flex-direction: column;
     align-items: center;
 }
-@media only screen and (min-width: 1100px){
+@media only screen and (min-width: 900px){
+    .project-photos-desktop{
+        display: inline;
+    }
+    .project-photos-mobile{
+        display: none
+    }
     .contact-form{
         width: 35%;
         border-radius: 3px;

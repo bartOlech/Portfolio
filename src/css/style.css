@@ -299,18 +299,39 @@ b{
 /* images of projects  */
 .mobile-image{
     width: 100vw;
-    height: 370px;
+    height: 100vw;
+    max-height: 380px;
     border-radius:5px;
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
     opacity: .4;
 }
+.technologies-cnt{
+    width: 100vw;
+    height: 75px;
+    position: absolute;
+    top: -70px;
+    left: -45px;
+}
 .project-photos-desktop{
     display: none;
 }
 .project-photos-mobile{
     display: flex;
+    flex-direction: column;
+}
+.hr-lines h2{
+    position: relative;
+}
+.hr-lines h2 hr{
+    display: flex;
+    width: 68px;
+    height: 2px;
+    border: none;
+    border-radius: 20%;
+    background: #302E3B;
+    margin-top: 5px;
 }
 
 .project-1{
@@ -425,7 +446,9 @@ b{
     height: 100%;
     z-index: -1;
     position: absolute;
-    background-image: url('../img/app-screen/pizza-screen.jpg'); 
+    background-image: url('../img/app-screen/pizza-screen.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .project-7:hover:after{
     content: '';
@@ -579,6 +602,9 @@ b{
     color:rgb(8, 9, 41);
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
+}
+.project-description h2{
+    margin-bottom: 118px;
 }
 .project-description ul{
     list-style: none;

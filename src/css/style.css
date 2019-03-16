@@ -469,6 +469,13 @@ b {
     position: absolute;
     opacity: .4;
 }
+.project-description-bck{
+    width: 100%;
+    height: 130px;
+    background-color: rgba(0, 0, 0, 0.13);
+
+    /* margin-left: -3%; */
+}
 
 .technologies-cnt {
     width: 100vw;
@@ -526,7 +533,7 @@ b {
     height: 100%;
     z-index: -1;
     position: absolute;
-    background-image: url('../img/app-screen/bit_bot_screen.jpg');
+    background-image: url('../img/app-screen/bit_bot_screen.png');
 }
 
 .project-2:hover:after {
@@ -543,7 +550,7 @@ b {
     height: 100%;
     z-index: -1;
     position: absolute;
-    background-image: url('../img/app-screen/quiz-screen.jpg');
+    background-image: url('../img/app-screen/quiz-screen.png');
 }
 
 .project-3:hover:after {
@@ -797,7 +804,7 @@ b {
 }
 
 .project-description h2 {
-    margin-bottom: 118px;
+    padding-bottom: -48px;
 }
 
 .project-description ul {
@@ -1022,9 +1029,13 @@ b {
     align-items: center;
     flex-wrap: wrap;
 }
-@media only screen and (max-width: 340px) {
+@media only screen and (max-width: 350px) {
     .project-description h2{
         margin-bottom: 10px;
+    }
+    .project-description-bck{
+
+        /* margin-left: -3%; */
     }
 }
 @media only screen and (min-width: 900px) {
@@ -1099,11 +1110,15 @@ b {
     }
 }
 
-@media only screen and (max-width:660px) {
+@media only screen and (max-width:560px) {
     .personel-data-cnt {
         margin-left: -30px;
     }
+    .project-description-bck{
+        margin-left: -8%;
+    }
 }
+
 
 @media only screen and (min-width:660px) {
     .parallax {

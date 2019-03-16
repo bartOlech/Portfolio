@@ -1,6 +1,15 @@
 let isHidden = true;
 const sendBtn = document.querySelector('#form-btn');
 
+// projects buttons
+const project1 = document.querySelector('#project-1');
+const project2 = document.querySelector('#project-2');
+const project3 = document.querySelector('#project-3');
+const project4 = document.querySelector('#project-4');
+const project5 = document.querySelector('#project-5');
+const project6 = document.querySelector('#project-6');
+const project7 = document.querySelector('#project-7');
+
 (function () {
 
     var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
@@ -96,11 +105,13 @@ const sendBtn = document.querySelector('#form-btn');
 document.querySelector('#button-load-more').addEventListener('click', function () {
     isHidden = !isHidden;
     if (!isHidden) {
-        document.querySelector('#project-6').classList.add('showMore')
-        document.querySelector('#project-7').classList.add('showMore')
+        project5.classList.add('showMore')
+        project6.classList.add('showMore')
+        project7.classList.add('showMore')
     } else {
-        document.querySelector('#project-6').classList.remove('showMore')
-        document.querySelector('#project-7').classList.remove('showMore')
+        project5.classList.remove('showMore')
+        project6.classList.remove('showMore')
+        project7.classList.remove('showMore')
     }
     if (!isHidden) {
         document.querySelector('#text-button').innerText = 'Mniej';
@@ -198,14 +209,7 @@ document.querySelector('#input-msg').addEventListener('keyup', function(){
     }
 })
 
-// projects buttons
-const project1 = document.querySelector('#project-1');
-const project2 = document.querySelector('#project-2');
-const project3 = document.querySelector('#project-3');
-const project4 = document.querySelector('#project-4');
-const project5 = document.querySelector('#project-5');
-const project6 = document.querySelector('#project-6');
-const project7 = document.querySelector('#project-7');
+
 
 project1.addEventListener('mouseover', function() {
     document.querySelector('#project-1-description').style.display = 'inline';

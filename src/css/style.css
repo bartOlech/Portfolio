@@ -156,7 +156,7 @@ b {
 .parallax {
     width: 100vw;
     height: 520px;
-    background-image: url('../img/parallax_image.png');
+    background-image: url('../img/parallax_image.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -441,8 +441,8 @@ b {
 }
 
 .project {
-    width: 400px;
-    height: 300px;
+    width: 530px;
+    height: 320px;
     margin-bottom: 10px;
     border-radius: 5px;
     position: relative;
@@ -455,6 +455,7 @@ b {
     border-radius: 5px;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: .5s;
 }
 
 /* images of projects  */
@@ -583,6 +584,7 @@ b {
     content: '';
     cursor: pointer;
     opacity: .3;
+    top: 0;
 }
 
 .project-6 {}
@@ -611,7 +613,7 @@ b {
     height: 100%;
     z-index: -1;
     position: absolute;
-    background-image: url('../img/app-screen/pizza-screen.png');
+    background-image: url('../img/app-screen/pizza-screen.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -738,7 +740,7 @@ b {
 }
 
 
-/* Odnośniki */
+/* Reference */
 
 .reference {
     text-align: center;
@@ -1010,6 +1012,7 @@ b {
 .projects-3x {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -1017,9 +1020,17 @@ b {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
-
+@media only screen and (max-width: 340px) {
+    .project-description h2{
+        margin-bottom: 10px;
+    }
+}
 @media only screen and (min-width: 900px) {
+    .project-description h2{
+        margin-bottom: 30px;
+    }
     .project-photos-desktop {
         display: inline;
     }
@@ -1063,10 +1074,7 @@ b {
         margin-right: -166px;
     }
 
-    .project {
-        width: 400px;
-    }
-
+   
     .projects-3x {
         display: flex;
         flex-direction: row;

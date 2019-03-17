@@ -1,3 +1,7 @@
+import './css/style.css';
+import './img/icons/cv.png';
+import Swiper from './js/swiper.min.js';
+
 let isHidden = true;
 const sendBtn = document.querySelector('#form-btn');
 
@@ -11,7 +15,6 @@ const project6 = document.querySelector('#project-6');
 const project7 = document.querySelector('#project-7');
 
 (function () {
-
     var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
 
     // Main
@@ -273,3 +276,36 @@ project7.addEventListener('mouseout', function() {
     document.querySelector('#project-7-description').style.display = 'none'
     document.querySelector('#project-7-reference').style.display = 'none';
 })
+
+// Parallax
+document.querySelector('#parallax-btn-skills').addEventListener('click', function() {
+    console.log('working...')
+})
+
+// Swiper 
+
+var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+
+
+
+
+
+
+
+
+
+
+

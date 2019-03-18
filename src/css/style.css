@@ -91,7 +91,7 @@ body {
     margin: 8% 0;
     position: absolute;
     z-index: 2;
-    bottom: 0;
+    bottom: -30px;
 }
 
 .arrow-position {
@@ -938,6 +938,10 @@ b {
 .contact-email {
     font-family: 'Rubik', sans-serif;
 }
+.email-small{
+    color: #909092;
+    padding-left: 30px;
+}
 
 /* Contact form */
 .contact-form {
@@ -998,6 +1002,7 @@ b {
     color: #fff;
     line-height: 1.2;
     border: none;
+    cursor: pointer;
 }
 
 .form-btn:hover {

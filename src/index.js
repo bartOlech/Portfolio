@@ -3,6 +3,9 @@ import './img/icons/cv.png';
 import Swiper from './js/swiper.min.js';
 import scrollToElement  from 'scroll-to-element';
 import * as projectsEvent from './js/projectsTemplate';
+import copy  from 'copy-text-to-clipboard';
+import swal from 'sweetalert';
+
 
 let isHidden = true;
 const sendBtn = document.querySelector('#form-btn');
@@ -279,6 +282,14 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
+//header scroll arrow
+document.querySelector('#header-arrow').addEventListener('click', function() {
+    scrollToElement('.about-me', {
+        offset: 0,
+        ease: 'inQuad',
+        duration: 1000
+    });
+})
 
 // parallax
 document.querySelector('#parallax-btn-skills').addEventListener('click', function() {
@@ -296,6 +307,13 @@ document.querySelector('#parallax-btn-projects').addEventListener('click', funct
         duration: 1000
     });
 })
+
+document.querySelector('#email-text').addEventListener('click', function() {
+    copy('olech.bartlomiej@gmail.com')
+    swal("", "E-mail został skopiowany", "success");
+       
+})
+
 
 
 

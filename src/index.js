@@ -1,6 +1,7 @@
 import './css/style.css';
 import './img/icons/cv.png';
 import Swiper from './js/swiper.min.js';
+import scrollToElement  from 'scroll-to-element';
 
 let isHidden = true;
 const sendBtn = document.querySelector('#form-btn');
@@ -297,6 +298,23 @@ var swiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+// paralax
+document.querySelector('#parallax-btn-skills').addEventListener('click', function() {
+    scrollToElement('.skills', {
+        offset: 0,
+        ease: 'inQuad',
+        duration: 1000
+    });
+})
+
+document.querySelector('#parallax-btn-projects').addEventListener('click', function() {
+    scrollToElement('.section-projects', {
+        offset: 0,
+        ease: 'inQuad',
+        duration: 1000
+    });
+})
 
 
 

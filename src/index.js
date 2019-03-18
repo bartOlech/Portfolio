@@ -2,6 +2,7 @@ import './css/style.css';
 import './img/icons/cv.png';
 import Swiper from './js/swiper.min.js';
 import scrollToElement  from 'scroll-to-element';
+import * as projectsEvent from './js/projectsTemplate';
 
 let isHidden = true;
 const sendBtn = document.querySelector('#form-btn');
@@ -105,7 +106,7 @@ const project7 = document.querySelector('#project-7');
     }
 })();
 
-
+// Load more projects btn
 document.querySelector('#button-load-more').addEventListener('click', function () {
     isHidden = !isHidden;
     if (!isHidden) {
@@ -129,9 +130,9 @@ document.querySelector('#button-load-more').addEventListener('click', function (
 
 });
 
+// Form section
 document.querySelector('#form-btn').addEventListener('click', function (e) {
     e.preventDefault();
-    console.log('click')
     const inputName = document.querySelector('#input-name');
     const inputEmail = document.querySelector('#input-email');
     const inputMsg = document.querySelector('#input-msg');
@@ -171,7 +172,6 @@ document.querySelector('#form-btn').addEventListener('click', function (e) {
     }
 
     if (correctValues) {
-        console.log('wysyłanie...')
         if(sendBtn.value === ''){
             sendBtn.innerHTML = 'Wysłano!'
         }else{
@@ -214,73 +214,54 @@ document.querySelector('#input-msg').addEventListener('keyup', function(){
 })
 
 
-
+//show / hide projects elements
 project1.addEventListener('mouseover', function() {
-    document.querySelector('#project-1-description').style.display = 'inline';
-    document.querySelector('#project-1-reference').style.display = 'flex';
+    projectsEvent.mouseOver('#project-1-description', '#project-1-reference')
 })
 project1.addEventListener('mouseout', function() {
-    document.querySelector('#project-1-description').style.display = 'none'
-    document.querySelector('#project-1-reference').style.display = 'none';
+    projectsEvent.mouseOut('#project-1-description', '#project-1-reference')
 })
 
 project2.addEventListener('mouseover', function() {
-    document.querySelector('#project-2-description').style.display = 'inline';
-    document.querySelector('#project-2-reference').style.display = 'flex';
+    projectsEvent.mouseOver('#project-2-description', '#project-2-reference')
 })
 project2.addEventListener('mouseout', function() {
-    document.querySelector('#project-2-description').style.display = 'none'
-    document.querySelector('#project-2-reference').style.display = 'none';
+    projectsEvent.mouseOut('#project-2-description', '#project-2-reference')
 })
 
 project3.addEventListener('mouseover', function() {
-    document.querySelector('#project-3-description').style.display = 'inline';
-    document.querySelector('#project-3-reference').style.display = 'flex';
+    projectsEvent.mouseOver('#project-3-description', '#project-3-reference')
 })
 project3.addEventListener('mouseout', function() {
-    document.querySelector('#project-3-description').style.display = 'none'
-    document.querySelector('#project-3-reference').style.display = 'none';
+    projectsEvent.mouseOut('#project-3-description', '#project-3-reference')
 })
 
 project4.addEventListener('mouseover', function() {
-    document.querySelector('#project-4-description').style.display = 'inline';
-    document.querySelector('#project-4-reference').style.display = 'flex';
+    projectsEvent.mouseOver('#project-4-description', '#project-4-reference')
 })
 project4.addEventListener('mouseout', function() {
-    document.querySelector('#project-4-description').style.display = 'none'
-    document.querySelector('#project-4-reference').style.display = 'none';
+    projectsEvent.mouseOut('#project-4-description', '#project-4-reference')
 })
 
 project5.addEventListener('mouseover', function() {
-    document.querySelector('#project-5-description').style.display = 'inline';
-    document.querySelector('#project-5-reference').style.display = 'flex';
+    projectsEvent.mouseOver('#project-5-description', '#project-5-reference')
 })
 project5.addEventListener('mouseout', function() {
-    document.querySelector('#project-5-description').style.display = 'none'
-    document.querySelector('#project-5-reference').style.display = 'none';
+    projectsEvent.mouseOut('#project-5-description', '#project-5-reference')
 })
 
 project6.addEventListener('mouseover', function() {
-    document.querySelector('#project-6-description').style.display = 'inline';
-    document.querySelector('#project-6-reference').style.display = 'flex';
+    projectsEvent.mouseOver('#project-6-description', '#project-6-reference')
 })
 project6.addEventListener('mouseout', function() {
-    document.querySelector('#project-6-description').style.display = 'none'
-    document.querySelector('#project-6-reference').style.display = 'none';
+    projectsEvent.mouseOut('#project-6-description', '#project-6-reference')
 })
 
 project7.addEventListener('mouseover', function() {
-    document.querySelector('#project-7-description').style.display = 'inline';
-    document.querySelector('#project-7-reference').style.display = 'flex';
+    projectsEvent.mouseOver('#project-7-description', '#project-7-reference')
 })
 project7.addEventListener('mouseout', function() {
-    document.querySelector('#project-7-description').style.display = 'none'
-    document.querySelector('#project-7-reference').style.display = 'none';
-})
-
-// Parallax
-document.querySelector('#parallax-btn-skills').addEventListener('click', function() {
-    console.log('working...')
+    projectsEvent.mouseOut('#project-7-description', '#project-7-reference')
 })
 
 // Swiper 
@@ -299,7 +280,7 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
-// paralax
+// parallax
 document.querySelector('#parallax-btn-skills').addEventListener('click', function() {
     scrollToElement('.skills', {
         offset: 0,

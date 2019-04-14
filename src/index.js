@@ -308,6 +308,7 @@ document.querySelector('#parallax-btn-projects').addEventListener('click', funct
     });
 })
 
+//copy e-mail to clickboard
 document.querySelector('#email-text').addEventListener('click', function() {
     copy('olech.bartlomiej@gmail.com')
     swal("", "E-mail został skopiowany", "success");

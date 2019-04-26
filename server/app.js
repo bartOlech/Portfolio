@@ -15,6 +15,6 @@ const corsOption = {
 
 app.use(cors(corsOption));
 
-app.use('/api', router)
+app.use('/emailapi', router)
 
 module.exports = app;

@@ -177,10 +177,14 @@ document.querySelector('#form-btn').addEventListener('click', function (e) {
     if (correctValues) {
         if(sendBtn.value === ''){
             sendBtn.innerHTML = 'Wysłano!'
+            document.querySelector('#input-name').value = '';
+            document.querySelector('#input-email').value = '';
+            document.querySelector('#input-msg').value = '';
+            swal("", "Wiadomość została wysłana", "success");
         }else{
         sendBtn.innerHTML = '';
         }
-        fetch('http://localhost:8080/api/mail', {
+        fetch('https://bartlomiejolech.pl/emailapi/mail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

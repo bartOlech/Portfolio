@@ -27,9 +27,9 @@ exports.mail = (req, res) => {
     });
 
     let mailOptions = {
-        from: '"Nodemailer Contact" olech.bartlomiej@gmail.com', // sender address
+        from: '"Contact from the portfolio" olech.bartlomiej@gmail.com', // sender address
         to: conf.login, // list of receivers
-        subject: 'Node Contact Request', // Subject line
+        subject: 'Portfolio Contact Request', // Subject line
         text: 'Hello world?', // plain text body
         html: output // html body
     };

@@ -1,7 +1,8 @@
 const nodemailer = require('nodemailer')
-const conf = require('../config/config')
+// const conf = require('../config/config')
 
 exports.mail = (req, res) => {
+    
     const output = `
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
@@ -18,8 +19,8 @@ exports.mail = (req, res) => {
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: conf.login, // generated ethereal user
-            pass: conf.pass  // generated ethereal password
+            user: 'olech.bartlomiej@gmail.com',
+            pass: 'Sru88653@'
         },
         tls: {
             rejectUnauthorized: false
@@ -28,7 +29,7 @@ exports.mail = (req, res) => {
 
     let mailOptions = {
         from: '"Contact from the portfolio" olech.bartlomiej@gmail.com', // sender address
-        to: conf.login, // list of receivers
+        to: 'olech.bartlomiej@gmail.com', // list of receivers
         subject: 'Portfolio Contact Request', // Subject line
         text: 'Hello world?', // plain text body
         html: output // html body

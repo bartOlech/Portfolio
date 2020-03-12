@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "dependencies": {
     "awesome-notifications": "^2.2.9",
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.26.7",
     "copy-text-to-clipboard": "^2.0.0",
     "gulp": "^3.9.1",
     "scroll-to-element": "^2.0.3",

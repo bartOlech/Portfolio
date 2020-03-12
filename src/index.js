@@ -10,15 +10,6 @@ import swal from 'sweetalert';
 let isHidden = true;
 const sendBtn = document.querySelector('#form-btn');
 
-// projects buttons
-const project1 = document.querySelector('#project-1');
-const project2 = document.querySelector('#project-2');
-const project3 = document.querySelector('#project-3');
-const project4 = document.querySelector('#project-4');
-const project5 = document.querySelector('#project-5');
-const project6 = document.querySelector('#project-6');
-const project7 = document.querySelector('#project-7');
-
 (function () {
     var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
 
@@ -109,29 +100,6 @@ const project7 = document.querySelector('#project-7');
     }
 })();
 
-// Load more projects btn
-document.querySelector('#button-load-more').addEventListener('click', function () {
-    isHidden = !isHidden;
-    if (!isHidden) {
-        project5.classList.add('showMore')
-        project6.classList.add('showMore')
-        project7.classList.add('showMore')
-    } else {
-        project5.classList.remove('showMore')
-        project6.classList.remove('showMore')
-        project7.classList.remove('showMore')
-    }
-    if (!isHidden) {
-        document.querySelector('#text-button').innerText = 'Mniej';
-        document.querySelector('#arrow-more-projects').classList.remove('arrow-down')
-        document.querySelector('#arrow-more-projects').classList.add('arrow-up')
-    } else {
-        document.querySelector('#text-button').innerText = 'Więcej projektów'
-        document.querySelector('#arrow-more-projects').classList.remove('arrow-up')
-        document.querySelector('#arrow-more-projects').classList.add('arrow-down')
-    }
-
-});
 
 // Form section
 document.querySelector('#form-btn').addEventListener('click', function (e) {
@@ -177,17 +145,15 @@ document.querySelector('#form-btn').addEventListener('click', function (e) {
     if (correctValues) {
         if(sendBtn.value === ''){
             sendBtn.innerHTML = 'Wysłano!'
-            document.querySelector('#input-name').value = '';
-            document.querySelector('#input-email').value = '';
-            document.querySelector('#input-msg').value = '';
             swal("", "Wiadomość została wysłana", "success");
         }else{
         sendBtn.innerHTML = '';
         }
-        fetch('https://bartlomiejolech.pl/emailapi/mail', {
+        fetch('http://bartlomiejolech.pl/emailapi/mail', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify({
                 name: inputName.value,
@@ -198,6 +164,9 @@ document.querySelector('#form-btn').addEventListener('click', function (e) {
             console.log(json)
             sendBtn.innerHTML = 'Wysłano!';
             sendBtn.disabled = true;
+            document.querySelector('#input-name').value = '';
+            document.querySelector('#input-email').value = '';
+            document.querySelector('#input-msg').value = '';
         }).catch(err => console.log(err))
     }
 })
@@ -220,56 +189,6 @@ document.querySelector('#input-msg').addEventListener('keyup', function(){
     }
 })
 
-
-//show / hide projects elements
-project1.addEventListener('mouseover', function() {
-    projectsEvent.mouseOver('#project-1-description', '#project-1-reference')
-})
-project1.addEventListener('mouseout', function() {
-    projectsEvent.mouseOut('#project-1-description', '#project-1-reference')
-})
-
-project2.addEventListener('mouseover', function() {
-    projectsEvent.mouseOver('#project-2-description', '#project-2-reference')
-})
-project2.addEventListener('mouseout', function() {
-    projectsEvent.mouseOut('#project-2-description', '#project-2-reference')
-})
-
-project3.addEventListener('mouseover', function() {
-    projectsEvent.mouseOver('#project-3-description', '#project-3-reference')
-})
-project3.addEventListener('mouseout', function() {
-    projectsEvent.mouseOut('#project-3-description', '#project-3-reference')
-})
-
-project4.addEventListener('mouseover', function() {
-    projectsEvent.mouseOver('#project-4-description', '#project-4-reference')
-})
-project4.addEventListener('mouseout', function() {
-    projectsEvent.mouseOut('#project-4-description', '#project-4-reference')
-})
-
-project5.addEventListener('mouseover', function() {
-    projectsEvent.mouseOver('#project-5-description', '#project-5-reference')
-})
-project5.addEventListener('mouseout', function() {
-    projectsEvent.mouseOut('#project-5-description', '#project-5-reference')
-})
-
-project6.addEventListener('mouseover', function() {
-    projectsEvent.mouseOver('#project-6-description', '#project-6-reference')
-})
-project6.addEventListener('mouseout', function() {
-    projectsEvent.mouseOut('#project-6-description', '#project-6-reference')
-})
-
-project7.addEventListener('mouseover', function() {
-    projectsEvent.mouseOver('#project-7-description', '#project-7-reference')
-})
-project7.addEventListener('mouseout', function() {
-    projectsEvent.mouseOut('#project-7-description', '#project-7-reference')
-})
 
 // Swiper 
 
@@ -317,6 +236,52 @@ document.querySelector('#email-text').addEventListener('click', function() {
     copy('olech.bartlomiej@gmail.com')
     swal("", "E-mail został skopiowany", "success");
        
+})
+
+// Update 2020
+// create a projects animation
+
+// first project
+document.querySelector('#project-1').addEventListener('mouseover', () => {
+    document.querySelector('#project-border-1').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
+})
+document.querySelector('#project-1').addEventListener('mouseout', () => {
+    document.querySelector('#project-border-1').setAttribute("style", "transform: translate(0, 0)");
+})
+// second project
+document.querySelector('#project-2').addEventListener('mouseover', () => {
+    document.querySelector('#project-border-2').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
+})
+document.querySelector('#project-2').addEventListener('mouseout', () => {
+    document.querySelector('#project-border-2').setAttribute("style", "transform: translate(0, 0)");
+})
+// third project
+document.querySelector('#project-3').addEventListener('mouseover', () => {
+    document.querySelector('#project-border-3').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
+})
+document.querySelector('#project-3').addEventListener('mouseout', () => {
+    document.querySelector('#project-border-3').setAttribute("style", "transform: translate(0, 0)");
+})
+// fourth project
+document.querySelector('#project-4').addEventListener('mouseover', () => {
+    document.querySelector('#project-border-4').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
+})
+document.querySelector('#project-4').addEventListener('mouseout', () => {
+    document.querySelector('#project-border-4').setAttribute("style", "transform: translate(0, 0)");
+})
+// fiveth project
+document.querySelector('#project-5').addEventListener('mouseover', () => {
+    document.querySelector('#project-border-5').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
+})
+document.querySelector('#project-5').addEventListener('mouseout', () => {
+    document.querySelector('#project-border-5').setAttribute("style", "transform: translate(0, 0)");
+})
+// sixth project
+document.querySelector('#project-6').addEventListener('mouseover', () => {
+    document.querySelector('#project-border-6').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
+})
+document.querySelector('#project-6').addEventListener('mouseout', () => {
+    document.querySelector('#project-border-6').setAttribute("style", "transform: translate(0, 0)");
 })
 
 

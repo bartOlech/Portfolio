@@ -630,7 +630,6 @@ b {
 .project {
     width: 320px;
     height: 210px;
-    background-color: rgb(53, 53, 53);
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -639,18 +638,77 @@ b {
     cursor: pointer;
     margin: 30px;
 }
+.project-border:hover {
+    background-color: rgb(53, 53, 53);
+}
 .project-border {
     width: 320px;
     height: 210px;
     background-color: rgba(0, 0, 0, .0);
-    border: 3px solid rgb(218, 197, 8);
     border-radius: 25px;
     position: absolute;
     top: 32px;
     left: 32px;
-    transition: .5s;
-    z-index: -1;
+    transition: .2s;
+    z-index: -2;
     opacity: 0;
+}
+.project-reference-text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(167, 167, 167);
+    padding-top: 80px;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+.project-reference-box {
+    display: none;
+    margin-left: -40px;
+}
+@keyframes project-arrow-ico-animation {
+    0% {
+        left: 218px;
+    }
+    50% {
+        left: 228px;
+    }
+    100% {
+        left: 218px;
+    }
+}
+.project-arrow-ico {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: 20px, 20px;
+    position: absolute;
+    top: 167px;
+    left: 218px;
+    animation: project-arrow-ico-animation 1.3s infinite linear;
+}
+
+/* project 1 */
+#project-1 {
+    background: #3AB396;
+    transition: .3s;
+}
+#project-1:hover {
+    background: rgb(4, 59, 43);
+}
+.logo-project-1 {
+    width: 320px;
+    height: 210px;
+    background-image: url('../img/app-screen/Learnby-logo.png');
+    background-repeat: no-repeat;
+    background-size: 220px, 130px;
+    position: absolute;
+    left: 78px; 
+    top: 85px; 
+}
+#project-border-1 {
+    border: 3px solid rgb(33, 100, 87);
+}
+.project-arrow-ico-1 {
+    background-image: url('../img/right-arrow.svg');
 }
 
 

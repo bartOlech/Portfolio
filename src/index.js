@@ -5,10 +5,25 @@ import scrollToElement  from 'scroll-to-element';
 import * as projectsEvent from './js/projectsTemplate';
 import copy  from 'copy-text-to-clipboard';
 import swal from 'sweetalert';
+import { BorderHandle } from './js/Projects/BorderHandle';
 
 
 let isHidden = true;
 const sendBtn = document.querySelector('#form-btn');
+
+const projectBorder1 = document.querySelector('#project-border-1');
+const projectBorder2 = document.querySelector('#project-border-2');
+const projectBorder3 = document.querySelector('#project-border-3');
+const projectBorder4 = document.querySelector('#project-border-4');
+const projectBorder5 = document.querySelector('#project-border-5');
+const projectBorder6 = document.querySelector('#project-border-6');
+
+const projectReferenceText1 = document.querySelector('#project-reference-box-1');
+const projectReferenceText2 = document.querySelector('#project-reference-box-2');
+const projectReferenceText3 = document.querySelector('#project-reference-box-3');
+const projectReferenceText4 = document.querySelector('#project-reference-box-4');
+const projectReferenceText5 = document.querySelector('#project-reference-box-5');
+const projectReferenceText6 = document.querySelector('#project-reference-box-6');
 
 (function () {
     var width, height, largeHeader, canvas, ctx, circles, target, animateHeader = true;
@@ -242,47 +257,16 @@ document.querySelector('#email-text').addEventListener('click', function() {
 // create a projects animation
 
 // first project
-document.querySelector('#project-1').addEventListener('mouseover', () => {
-    document.querySelector('#project-border-1').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
-})
-document.querySelector('#project-1').addEventListener('mouseout', () => {
-    document.querySelector('#project-border-1').setAttribute("style", "transform: translate(0, 0)");
-})
-// second project
-document.querySelector('#project-2').addEventListener('mouseover', () => {
-    document.querySelector('#project-border-2').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
-})
-document.querySelector('#project-2').addEventListener('mouseout', () => {
-    document.querySelector('#project-border-2').setAttribute("style", "transform: translate(0, 0)");
-})
-// third project
-document.querySelector('#project-3').addEventListener('mouseover', () => {
-    document.querySelector('#project-border-3').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
-})
-document.querySelector('#project-3').addEventListener('mouseout', () => {
-    document.querySelector('#project-border-3').setAttribute("style", "transform: translate(0, 0)");
-})
-// fourth project
-document.querySelector('#project-4').addEventListener('mouseover', () => {
-    document.querySelector('#project-border-4').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
-})
-document.querySelector('#project-4').addEventListener('mouseout', () => {
-    document.querySelector('#project-border-4').setAttribute("style", "transform: translate(0, 0)");
-})
-// fiveth project
-document.querySelector('#project-5').addEventListener('mouseover', () => {
-    document.querySelector('#project-border-5').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
-})
-document.querySelector('#project-5').addEventListener('mouseout', () => {
-    document.querySelector('#project-border-5').setAttribute("style", "transform: translate(0, 0)");
-})
-// sixth project
-document.querySelector('#project-6').addEventListener('mouseover', () => {
-    document.querySelector('#project-border-6').setAttribute("style", "transform: translate(10px, 10px); opacity: 1");
-})
-document.querySelector('#project-6').addEventListener('mouseout', () => {
-    document.querySelector('#project-border-6').setAttribute("style", "transform: translate(0, 0)");
-})
+BorderHandle('#project-1', projectBorder1, projectReferenceText1)
+BorderHandle('#project-2', projectBorder2)
+BorderHandle('#project-3', projectBorder3)
+BorderHandle('#project-4', projectBorder4)
+BorderHandle('#project-5', projectBorder5)
+BorderHandle('#project-6', projectBorder6)
+
+
+
+
 
 
 

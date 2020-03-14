@@ -702,7 +702,7 @@ b {
     background-size: 220px, 130px;
     position: absolute;
     left: 78px; 
-    top: 85px; 
+    top: 89px; 
 }
 #project-border-1 {
     border: 3px solid rgb(33, 100, 87);
@@ -711,7 +711,130 @@ b {
     background-image: url('../img/right-arrow.svg');
 }
 
+/* project 2 */
+#project-2 {
+    background: #0197bd;
+    transition: .3s;
+}
+#project-2:hover {
+    background: #005b72;
+}
+.logo-project-2 {
+    width: 280px;
+    height: 190px;
+    background-image: url('../img/app-screen/noizze-logo.png');
+    background-repeat: no-repeat;
+    background-size: 220px, 130px;
+    position: absolute;
+    left: 78px; 
+    top: 82px; 
+}
+#project-border-2 {
+    border: 3px solid #005b72;
+}
+.project-arrow-ico-2 {
+    background-image: url('../img/right-arrow.svg');
+}
 
+/* project 3 */
+#project-3 {
+    background: #D95240;
+    transition: .3s;
+}
+#project-3:hover {
+    background: rgb(124, 43, 33);
+}
+.logo-project-3 {
+    width: 280px;
+    height: 190px;
+    background-image: url('../img/app-screen/logo-quiz.png');
+    background-repeat: no-repeat;
+    background-size: 220px, 130px;
+    position: absolute;
+    left: 80px; 
+    top: 92px; 
+}
+#project-border-3 {
+    border: 3px solid rgb(124, 43, 33);
+}
+.project-arrow-ico-3 {
+    background-image: url('../img/right-arrow.svg');
+}
+
+/* project 4 */
+#project-4 {
+    background: #2d6cdf;
+    transition: .3s;
+}
+#project-4:hover {
+    background: #183a79;
+}
+.logo-project-4 {
+    width: 280px;
+    height: 190px;
+    background-image: url('../img/app-screen/chatbot-ai.png');
+    background-repeat: no-repeat;
+    background-size: 220px, 130px;
+    position: absolute;
+    left: 80px; 
+    top: 66px; 
+}
+#project-border-4 {
+    border: 3px solid #183a79;
+}
+.project-arrow-ico-4 {
+    background-image: url('../img/right-arrow.svg');
+}
+
+/* project 5 */
+#project-5 {
+    background: #574b90;
+    transition: .3s;
+}
+#project-5:hover {
+    background: #312a57;
+}
+.logo-project-5 {
+    width: 280px;
+    height: 190px;
+    background-image: url('../img/app-screen/bitmex-logo.png');
+    background-repeat: no-repeat;
+    background-size: 220px, 130px;
+    position: absolute;
+    left: 80px; 
+    top: 96px; 
+}
+#project-border-5 {
+    border: 3px solid #312a57;
+}
+.project-arrow-ico-5 {
+    background-image: url('../img/right-arrow.svg');
+}
+
+/* project 6 */
+#project-6 {
+    background: #ff9f68;
+    transition: .3s;
+}
+#project-6:hover {
+    background: #ad5b2c;
+}
+.logo-project-6 {
+    width: 280px;
+    height: 190px;
+    background-image: url('../img/app-screen/pizzeria-app.png');
+    background-repeat: no-repeat;
+    background-size: 220px, 130px;
+    position: absolute;
+    left: 80px; 
+    top: 108px; 
+}
+#project-border-6 {
+    border: 3px solid #ad5b2c;
+}
+.project-arrow-ico-6 {
+    background-image: url('../img/right-arrow.svg');
+}
 /* Reference */
 
 .reference {

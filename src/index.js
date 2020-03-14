@@ -258,11 +258,11 @@ document.querySelector('#email-text').addEventListener('click', function() {
 
 // first project
 BorderHandle('#project-1', projectBorder1, projectReferenceText1)
-BorderHandle('#project-2', projectBorder2)
-BorderHandle('#project-3', projectBorder3)
-BorderHandle('#project-4', projectBorder4)
-BorderHandle('#project-5', projectBorder5)
-BorderHandle('#project-6', projectBorder6)
+BorderHandle('#project-2', projectBorder2, projectReferenceText2)
+BorderHandle('#project-3', projectBorder3, projectReferenceText3)
+BorderHandle('#project-4', projectBorder4, projectReferenceText4)
+BorderHandle('#project-5', projectBorder5, projectReferenceText5)
+BorderHandle('#project-6', projectBorder6, projectReferenceText6)
 
 
 

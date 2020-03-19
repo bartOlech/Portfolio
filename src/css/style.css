@@ -620,6 +620,8 @@ b {
 .projects-line {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    flex-flow: wrap;
 }
 .project-box {
     position: relative;
@@ -647,8 +649,8 @@ b {
     background-color: rgba(0, 0, 0, .0);
     border-radius: 25px;
     position: absolute;
-    top: 32px;
-    left: 32px;
+    top: 7px;
+    left: 30px;
     transition: .2s;
     z-index: -2;
     opacity: 0;
@@ -663,6 +665,9 @@ b {
 .project-reference-box {
     display: none;
     margin-left: -40px;
+}
+.project-link {
+    text-decoration: none;
 }
 @keyframes project-arrow-ico-animation {
     0% {
@@ -681,10 +686,11 @@ b {
     background-repeat: no-repeat;
     background-size: 20px, 20px;
     position: absolute;
-    top: 167px;
+    top: 137px;
     left: 218px;
     animation: project-arrow-ico-animation 1.3s infinite linear;
 }
+
 
 /* project 1 */
 #project-1 {
@@ -702,7 +708,7 @@ b {
     background-size: 220px, 130px;
     position: absolute;
     left: 78px; 
-    top: 89px; 
+    top: 60px; 
 }
 #project-border-1 {
     border: 3px solid rgb(33, 100, 87);
@@ -720,14 +726,14 @@ b {
     background: #005b72;
 }
 .logo-project-2 {
-    width: 280px;
+    width: 260px;
     height: 190px;
     background-image: url('../img/app-screen/noizze-logo.png');
     background-repeat: no-repeat;
-    background-size: 220px, 130px;
+    background-size: 150px, 70px;
     position: absolute;
-    left: 78px; 
-    top: 82px; 
+    left: 115px; 
+    top: 65px; 
 }
 #project-border-2 {
     border: 3px solid #005b72;
@@ -749,10 +755,10 @@ b {
     height: 190px;
     background-image: url('../img/app-screen/logo-quiz.png');
     background-repeat: no-repeat;
-    background-size: 220px, 130px;
+    background-size: 160px, 70px;
     position: absolute;
-    left: 80px; 
-    top: 92px; 
+    left: 110px; 
+    top: 78px; 
 }
 #project-border-3 {
     border: 3px solid rgb(124, 43, 33);
@@ -777,7 +783,7 @@ b {
     background-size: 220px, 130px;
     position: absolute;
     left: 80px; 
-    top: 66px; 
+    top: 36px; 
 }
 #project-border-4 {
     border: 3px solid #183a79;
@@ -802,7 +808,7 @@ b {
     background-size: 220px, 130px;
     position: absolute;
     left: 80px; 
-    top: 96px; 
+    top: 66px; 
 }
 #project-border-5 {
     border: 3px solid #312a57;
@@ -827,7 +833,7 @@ b {
     background-size: 220px, 130px;
     position: absolute;
     left: 80px; 
-    top: 108px; 
+    top: 78px; 
 }
 #project-border-6 {
     border: 3px solid #ad5b2c;
@@ -835,6 +841,22 @@ b {
 .project-arrow-ico-6 {
     background-image: url('../img/right-arrow.svg');
 }
+
+.another-projects {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    margin-top: 50px;
+    margin-bottom: -75px;
+    text-align: center;
+}
+
+.another-projects a {
+    color: rgb(15, 40, 95);
+    text-decoration: none;
+    font-weight: 600;
+    
+}
+
 /* Reference */
 
 .reference {

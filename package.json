@@ -7,7 +7,7 @@
     "awesome-notifications": "^2.2.9",
     "browser-sync": "^2.26.7",
     "copy-text-to-clipboard": "^2.0.0",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "scroll-to-element": "^2.0.3",
     "sweetalert": "^2.1.2"
   },
